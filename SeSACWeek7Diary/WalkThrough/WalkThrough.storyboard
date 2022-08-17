@@ -33,25 +33,36 @@
                                     <constraint firstAttribute="width" constant="100" id="xH2-P5-8fK"/>
                                 </constraints>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="J36-p2-eCG">
+                                <rect key="frame" x="344" y="65.5" width="50" height="47.5"/>
+                                <color key="tintColor" systemColor="systemPinkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="6qf-xU-vsn"/>
+                                    <constraint firstAttribute="width" constant="50" id="Kvt-jY-QMN"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBrownColor"/>
                         <constraints>
+                            <constraint firstItem="J36-p2-eCG" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="G5c-Qr-vED"/>
                             <constraint firstItem="gTm-OH-bjR" firstAttribute="top" secondItem="K62-OB-qw3" secondAttribute="bottom" constant="8" id="IBQ-F6-Yxb"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="K62-OB-qw3" secondAttribute="trailing" constant="30" id="Odm-PE-Eho"/>
                             <constraint firstItem="K62-OB-qw3" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="ZJZ-j4-BqD"/>
                             <constraint firstItem="K62-OB-qw3" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="30" id="brJ-24-07L"/>
                             <constraint firstItem="gTm-OH-bjR" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="jKP-Ft-3tb"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="J36-p2-eCG" secondAttribute="trailing" constant="20" id="xqP-3M-D6x"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="blackView" destination="gTm-OH-bjR" id="TxI-1b-lsl"/>
+                        <outlet property="heartImageView" destination="J36-p2-eCG" id="3eI-SY-Iup"/>
                         <outlet property="tutorialLabel" destination="K62-OB-qw3" id="ydS-ES-nPY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="113" y="98"/>
+            <point key="canvasLocation" x="111.59420289855073" y="97.767857142857139"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="eNJ-C2-w8l">
@@ -124,6 +135,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="heart.fill" catalog="system" width="128" height="109"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
@@ -132,6 +144,9 @@
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPurpleColor">
             <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

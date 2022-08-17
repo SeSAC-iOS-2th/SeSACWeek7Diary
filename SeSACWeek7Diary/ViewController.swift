@@ -21,6 +21,9 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+        let vc = CodeSnap2ViewController()
+        present(vc, animated: true)
+        
         testOpen()
         
 //        showSesacAlert(title: "테스트 얼럿", message: "테스트 메시지", buttonTitle: "변경") { _ in
