@@ -21,7 +21,7 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        let vc = CodeSnap2ViewController()
+        let vc = CodeBasedAutoLayoutViewController()
         present(vc, animated: true)
         
         testOpen()
