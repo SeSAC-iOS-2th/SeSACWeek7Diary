@@ -7,39 +7,45 @@
 
 import UIKit
 import SeSACUIFramework
+import SnapKit
 
 class ViewController: UIViewController {
+        
+    let nameButton: UIButton = {
+        let view = UIButton()
+        view.setTitle("닉네임", for: .normal)
+        view.backgroundColor = .black
+        return view
+    }()
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        configure()
         
+        nameButton.addTarget(self, action: #selector(nameButtonClicked), for: .touchUpInside)
     }
     
-
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    @objc func nameButtonClicked() {
         
-        let vc = CodeBasedAutoLayoutViewController()
+        let vc = ProfileViewController()
+        
+        vc.saveButtonActionHandler = {
+            self.nameButton.setTitle(vc.nameTextField.text, for: .normal)
+            
+        }
+        
         present(vc, animated: true)
-        
-        testOpen()
-        
-//        showSesacAlert(title: "테스트 얼럿", message: "테스트 메시지", buttonTitle: "변경") { _ in
-//            self.view.backgroundColor = .lightGray
-//        }
-        
-//        let image = UIImage(systemName: "star.fill")!
-//        let shareURL = "https://www.apple.com"
-//        let text = "WWDC What's New!!!"
-//        sesacShowActivityViewController(shareImage: image, shareURL: shareURL, shareText: text)
-        
-        OpenWebView.presentWebViewController(self, url: "https://www.naver.com", transitionStyle: .present)
-        
     }
+     
+    func configure() {
+        view.addSubview(nameButton)
         
-        
+        nameButton.snp.makeConstraints { make in
+            make.width.height.equalTo(200)
+            make.center.equalTo(view)
+        }
+    }
 
 }
 

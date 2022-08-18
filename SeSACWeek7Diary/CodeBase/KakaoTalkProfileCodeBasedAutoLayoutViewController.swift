@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CodeBasedAutoLayoutViewController: UIViewController {
+class KakaoTalkProfileCodeBasedAutoLayoutViewController: UIViewController {
     
     let backgroundImageView: UIImageView = {
         let view = UIImageView()
