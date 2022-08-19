@@ -7,6 +7,10 @@
 
 import UIKit
 
+extension NSNotification.Name {
+    static let saveButton = NSNotification.Name("saveButtonNotification")
+}
+
 class ProfileViewController: UIViewController {
     
     let saveButton: UIButton = {
@@ -38,7 +42,7 @@ class ProfileViewController: UIViewController {
         }
     }
 
-    var saveButtonActionHandler: (() -> ())? //함수 자체
+    var saveButtonActionHandler: ((String) -> ())? //함수 자체
 
     
     override func viewDidLoad() {
@@ -48,13 +52,31 @@ class ProfileViewController: UIViewController {
         view.backgroundColor = .white
         
         saveButton.addTarget(self, action: #selector(saveButtonClicked), for: .touchUpInside)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(saveButtonNotificationObserver(notification:)), name: NSNotification.Name("TEST"), object: nil)
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name("TEST"), object: nil)
+    }
+    
+    @objc func saveButtonNotificationObserver(notification: NSNotification) {
+        print(#function)
+        if let name = notification.userInfo?["name"] as? String {
+            print(name)
+            self.nameTextField.text = name
+        }
     }
     
         
     @objc func saveButtonClicked() {
         
+        //2, Notification
+        NotificationCenter.default.post(name: .saveButton, object: nil, userInfo: ["name": nameTextField.text!, "value": 123456])
+        
+        //1. 클로저
         //값 전달 기능 실행 => 클로저 구문 활용
-        saveButtonActionHandler?()
+        //saveButtonActionHandler?(nameTextField.text!)
         
         //화면 Dismiss
         dismiss(animated: true)

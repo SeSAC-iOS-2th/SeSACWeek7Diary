@@ -28,6 +28,11 @@
 		1288590928AB40DC00919587 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1288590828AB40DC00919587 /* SecondViewController.swift */; };
 		1288590B28AB40E300919587 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1288590A28AB40E300919587 /* ThirdViewController.swift */; };
 		1288590D28AB412600919587 /* WalkThroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1288590C28AB412600919587 /* WalkThroughViewController.swift */; };
+		12DCC98B28AF1272008F7FAC /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DCC98A28AF1272008F7FAC /* BaseViewController.swift */; };
+		12DCC98E28AF1441008F7FAC /* WriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DCC98D28AF1441008F7FAC /* WriteViewController.swift */; };
+		12DCC99028AF16A3008F7FAC /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DCC98F28AF16A3008F7FAC /* BaseView.swift */; };
+		12DCC99228AF1797008F7FAC /* WriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DCC99128AF1797008F7FAC /* WriteView.swift */; };
+		12DCC99528AF2CFC008F7FAC /* BlackRadiusTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DCC99428AF2CFC008F7FAC /* BlackRadiusTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +88,11 @@
 		1288590828AB40DC00919587 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		1288590A28AB40E300919587 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		1288590C28AB412600919587 /* WalkThroughViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkThroughViewController.swift; sourceTree = "<group>"; };
+		12DCC98A28AF1272008F7FAC /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		12DCC98D28AF1441008F7FAC /* WriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteViewController.swift; sourceTree = "<group>"; };
+		12DCC98F28AF16A3008F7FAC /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		12DCC99128AF1797008F7FAC /* WriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteView.swift; sourceTree = "<group>"; };
+		12DCC99428AF2CFC008F7FAC /* BlackRadiusTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackRadiusTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +149,8 @@
 		128858CD28AB1FC800919587 /* SeSACWeek7Diary */ = {
 			isa = PBXGroup;
 			children = (
+				12DCC98C28AF1420008F7FAC /* Diary */,
+				12DCC98728AF125F008F7FAC /* Utility */,
 				120EAC5228ADDEF2006730C0 /* Extension */,
 				1276F38F28AC718E00B03C86 /* CodeBase */,
 				1288590128AB3A5B00919587 /* WalkThrough */,
@@ -180,6 +192,33 @@
 				1288590A28AB40E300919587 /* ThirdViewController.swift */,
 			);
 			path = WalkThrough;
+			sourceTree = "<group>";
+		};
+		12DCC98728AF125F008F7FAC /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				12DCC99328AF2CD9008F7FAC /* CustomView */,
+				12DCC98A28AF1272008F7FAC /* BaseViewController.swift */,
+				12DCC98F28AF16A3008F7FAC /* BaseView.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		12DCC98C28AF1420008F7FAC /* Diary */ = {
+			isa = PBXGroup;
+			children = (
+				12DCC98D28AF1441008F7FAC /* WriteViewController.swift */,
+				12DCC99128AF1797008F7FAC /* WriteView.swift */,
+			);
+			path = Diary;
+			sourceTree = "<group>";
+		};
+		12DCC99328AF2CD9008F7FAC /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				12DCC99428AF2CFC008F7FAC /* BlackRadiusTextField.swift */,
+			);
+			path = CustomView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,10 +325,14 @@
 			files = (
 				128858D328AB1FC800919587 /* ViewController.swift in Sources */,
 				120EAC5828ADDF4D006730C0 /* UIViewController+Extension.swift in Sources */,
+				12DCC99228AF1797008F7FAC /* WriteView.swift in Sources */,
 				128858CF28AB1FC800919587 /* AppDelegate.swift in Sources */,
+				12DCC99028AF16A3008F7FAC /* BaseView.swift in Sources */,
 				1276F39B28AC8C0B00B03C86 /* CodeSnap2ViewController.swift in Sources */,
 				120EAC5A28ADE5FF006730C0 /* ProfileViewController.swift in Sources */,
+				12DCC98B28AF1272008F7FAC /* BaseViewController.swift in Sources */,
 				128858D128AB1FC800919587 /* SceneDelegate.swift in Sources */,
+				12DCC99528AF2CFC008F7FAC /* BlackRadiusTextField.swift in Sources */,
 				1214909728AD214D008106B6 /* BaedalRaceCodeBasedAutoLayoutViewController.swift in Sources */,
 				1288590928AB40DC00919587 /* SecondViewController.swift in Sources */,
 				12503F8F28ACBE8300A4FEBC /* KakaoTalkProfileCodeBasedAutoLayoutViewController.swift in Sources */,
@@ -297,6 +340,7 @@
 				1288590B28AB40E300919587 /* ThirdViewController.swift in Sources */,
 				1276F39328AC71AF00B03C86 /* CodeViewController.swift in Sources */,
 				1288590D28AB412600919587 /* WalkThroughViewController.swift in Sources */,
+				12DCC98E28AF1441008F7FAC /* WriteViewController.swift in Sources */,
 				1288590728AB3A9600919587 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
