@@ -7,10 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1204DD4428AFE380004AB340 /* ImageSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1204DD4328AFE380004AB340 /* ImageSearchView.swift */; };
+		1204DD4828AFE389004AB340 /* ImageSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1204DD4728AFE389004AB340 /* ImageSearchViewController.swift */; };
 		120EAC5828ADDF4D006730C0 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120EAC5728ADDF4D006730C0 /* UIViewController+Extension.swift */; };
 		120EAC5A28ADE5FF006730C0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120EAC5928ADE5FF006730C0 /* ProfileViewController.swift */; };
 		1214909728AD214D008106B6 /* BaedalRaceCodeBasedAutoLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1214909628AD214D008106B6 /* BaedalRaceCodeBasedAutoLayoutViewController.swift */; };
 		12503F8F28ACBE8300A4FEBC /* KakaoTalkProfileCodeBasedAutoLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12503F8E28ACBE8300A4FEBC /* KakaoTalkProfileCodeBasedAutoLayoutViewController.swift */; };
+		12639A6228B31693002ADA38 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 12639A6128B31693002ADA38 /* Realm */; };
+		12639A6428B31693002ADA38 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 12639A6328B31693002ADA38 /* RealmSwift */; };
+		12639A6A28B319F2002ADA38 /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12639A6928B319F2002ADA38 /* RealmModel.swift */; };
+		12639A6C28B326DF002ADA38 /* ImageDummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12639A6B28B326DF002ADA38 /* ImageDummyData.swift */; };
+		12639A6E28B326FA002ADA38 /* ImageSearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12639A6D28B326FA002ADA38 /* ImageSearchCollectionViewCell.swift */; };
+		12639A7128B32734002ADA38 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 12639A7028B32734002ADA38 /* Kingfisher */; };
+		12639A7328B32761002ADA38 /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12639A7228B32761002ADA38 /* BaseCollectionViewCell.swift */; };
+		12639A7528B32A9B002ADA38 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12639A7428B32A9B002ADA38 /* HomeViewController.swift */; };
 		1276F39328AC71AF00B03C86 /* CodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1276F39228AC71AF00B03C86 /* CodeViewController.swift */; };
 		1276F39628AC822900B03C86 /* CodeSnapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1276F39528AC822900B03C86 /* CodeSnapViewController.swift */; };
 		1276F39928AC828300B03C86 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1276F39828AC828300B03C86 /* SnapKit */; };
@@ -67,10 +77,17 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1204DD4328AFE380004AB340 /* ImageSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSearchView.swift; sourceTree = "<group>"; };
+		1204DD4728AFE389004AB340 /* ImageSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSearchViewController.swift; sourceTree = "<group>"; };
 		120EAC5728ADDF4D006730C0 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		120EAC5928ADE5FF006730C0 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		1214909628AD214D008106B6 /* BaedalRaceCodeBasedAutoLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaedalRaceCodeBasedAutoLayoutViewController.swift; sourceTree = "<group>"; };
 		12503F8E28ACBE8300A4FEBC /* KakaoTalkProfileCodeBasedAutoLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoTalkProfileCodeBasedAutoLayoutViewController.swift; sourceTree = "<group>"; };
+		12639A6928B319F2002ADA38 /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
+		12639A6B28B326DF002ADA38 /* ImageDummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDummyData.swift; sourceTree = "<group>"; };
+		12639A6D28B326FA002ADA38 /* ImageSearchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSearchCollectionViewCell.swift; sourceTree = "<group>"; };
+		12639A7228B32761002ADA38 /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
+		12639A7428B32A9B002ADA38 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		1276F39228AC71AF00B03C86 /* CodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeViewController.swift; sourceTree = "<group>"; };
 		1276F39528AC822900B03C86 /* CodeSnapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeSnapViewController.swift; sourceTree = "<group>"; };
 		1276F39A28AC8C0B00B03C86 /* CodeSnap2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeSnap2ViewController.swift; sourceTree = "<group>"; };
@@ -100,8 +117,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12639A6428B31693002ADA38 /* RealmSwift in Frameworks */,
+				12639A6228B31693002ADA38 /* Realm in Frameworks */,
 				128858FE28AB2C6000919587 /* SeSACUIFramework.framework in Frameworks */,
 				1276F39928AC828300B03C86 /* SnapKit in Frameworks */,
+				12639A7128B32734002ADA38 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,6 +134,14 @@
 				120EAC5728ADDF4D006730C0 /* UIViewController+Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		12639A6828B319DE002ADA38 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				12639A6928B319F2002ADA38 /* RealmModel.swift */,
+			);
+			path = Realm;
 			sourceTree = "<group>";
 		};
 		1276F38F28AC718E00B03C86 /* CodeBase */ = {
@@ -149,6 +177,7 @@
 		128858CD28AB1FC800919587 /* SeSACWeek7Diary */ = {
 			isa = PBXGroup;
 			children = (
+				12639A6828B319DE002ADA38 /* Realm */,
 				12DCC98C28AF1420008F7FAC /* Diary */,
 				12DCC98728AF125F008F7FAC /* Utility */,
 				120EAC5228ADDEF2006730C0 /* Extension */,
@@ -200,6 +229,7 @@
 				12DCC99328AF2CD9008F7FAC /* CustomView */,
 				12DCC98A28AF1272008F7FAC /* BaseViewController.swift */,
 				12DCC98F28AF16A3008F7FAC /* BaseView.swift */,
+				12639A7228B32761002ADA38 /* BaseCollectionViewCell.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -209,6 +239,11 @@
 			children = (
 				12DCC98D28AF1441008F7FAC /* WriteViewController.swift */,
 				12DCC99128AF1797008F7FAC /* WriteView.swift */,
+				1204DD4328AFE380004AB340 /* ImageSearchView.swift */,
+				1204DD4728AFE389004AB340 /* ImageSearchViewController.swift */,
+				12639A6B28B326DF002ADA38 /* ImageDummyData.swift */,
+				12639A6D28B326FA002ADA38 /* ImageSearchCollectionViewCell.swift */,
+				12639A7428B32A9B002ADA38 /* HomeViewController.swift */,
 			);
 			path = Diary;
 			sourceTree = "<group>";
@@ -240,6 +275,9 @@
 			name = SeSACWeek7Diary;
 			packageProductDependencies = (
 				1276F39828AC828300B03C86 /* SnapKit */,
+				12639A6128B31693002ADA38 /* Realm */,
+				12639A6328B31693002ADA38 /* RealmSwift */,
+				12639A7028B32734002ADA38 /* Kingfisher */,
 			);
 			productName = SeSACWeek7Diary;
 			productReference = 128858CB28AB1FC800919587 /* SeSACWeek7Diary.app */;
@@ -271,6 +309,8 @@
 			mainGroup = 128858C228AB1FC800919587;
 			packageReferences = (
 				1276F39728AC828300B03C86 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				12639A6028B31693002ADA38 /* XCRemoteSwiftPackageReference "realm-swift" */,
+				12639A6F28B32734002ADA38 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 128858CC28AB1FC800919587 /* Products */;
 			projectDirPath = "";
@@ -326,21 +366,28 @@
 				128858D328AB1FC800919587 /* ViewController.swift in Sources */,
 				120EAC5828ADDF4D006730C0 /* UIViewController+Extension.swift in Sources */,
 				12DCC99228AF1797008F7FAC /* WriteView.swift in Sources */,
+				12639A6A28B319F2002ADA38 /* RealmModel.swift in Sources */,
 				128858CF28AB1FC800919587 /* AppDelegate.swift in Sources */,
+				1204DD4428AFE380004AB340 /* ImageSearchView.swift in Sources */,
 				12DCC99028AF16A3008F7FAC /* BaseView.swift in Sources */,
 				1276F39B28AC8C0B00B03C86 /* CodeSnap2ViewController.swift in Sources */,
 				120EAC5A28ADE5FF006730C0 /* ProfileViewController.swift in Sources */,
 				12DCC98B28AF1272008F7FAC /* BaseViewController.swift in Sources */,
 				128858D128AB1FC800919587 /* SceneDelegate.swift in Sources */,
+				12639A7528B32A9B002ADA38 /* HomeViewController.swift in Sources */,
 				12DCC99528AF2CFC008F7FAC /* BlackRadiusTextField.swift in Sources */,
 				1214909728AD214D008106B6 /* BaedalRaceCodeBasedAutoLayoutViewController.swift in Sources */,
 				1288590928AB40DC00919587 /* SecondViewController.swift in Sources */,
 				12503F8F28ACBE8300A4FEBC /* KakaoTalkProfileCodeBasedAutoLayoutViewController.swift in Sources */,
+				12639A7328B32761002ADA38 /* BaseCollectionViewCell.swift in Sources */,
 				1276F39628AC822900B03C86 /* CodeSnapViewController.swift in Sources */,
 				1288590B28AB40E300919587 /* ThirdViewController.swift in Sources */,
 				1276F39328AC71AF00B03C86 /* CodeViewController.swift in Sources */,
+				1204DD4828AFE389004AB340 /* ImageSearchViewController.swift in Sources */,
 				1288590D28AB412600919587 /* WalkThroughViewController.swift in Sources */,
+				12639A6C28B326DF002ADA38 /* ImageDummyData.swift in Sources */,
 				12DCC98E28AF1441008F7FAC /* WriteViewController.swift in Sources */,
+				12639A6E28B326FA002ADA38 /* ImageSearchCollectionViewCell.swift in Sources */,
 				1288590728AB3A9600919587 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -561,6 +608,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		12639A6028B31693002ADA38 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+		12639A6F28B32734002ADA38 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 		1276F39728AC828300B03C86 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -572,6 +635,21 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		12639A6128B31693002ADA38 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 12639A6028B31693002ADA38 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		12639A6328B31693002ADA38 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 12639A6028B31693002ADA38 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+		12639A7028B32734002ADA38 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 12639A6F28B32734002ADA38 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
 		1276F39828AC828300B03C86 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 1276F39728AC828300B03C86 /* XCRemoteSwiftPackageReference "SnapKit" */;

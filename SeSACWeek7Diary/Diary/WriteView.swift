@@ -35,13 +35,31 @@ class WriteView: BaseView {
         return view
     }()
     
+    let searchImageButton: UIButton = {
+        let view = UIButton()
+        view.setImage(UIImage(systemName: "photo"), for: .normal)
+        view.tintColor = .white
+        view.backgroundColor = .red
+        view.layer.cornerRadius = 25
+        return view
+    }()
+
+    
+    let sampleButton: UIButton = {
+        let view = UIButton()
+        view.backgroundColor = .green
+        return view
+    }()
+    
     override func configureUI() {
-        [photoImageView, titleTextField, dateTextField, contentTextView].forEach {
+        [photoImageView, titleTextField, dateTextField, contentTextView, searchImageButton, sampleButton].forEach {
             self.addSubview($0)
         }
     }
     
     override func setConstraints() {
+        
+        
         photoImageView.snp.makeConstraints { make in
             make.top.equalTo(self.safeAreaLayoutGuide)
             make.leadingMargin.equalTo(20)
@@ -71,6 +89,13 @@ class WriteView: BaseView {
             make.bottom.equalTo(self.safeAreaLayoutGuide)
             
         }
+        
+        searchImageButton.snp.makeConstraints { make in
+            make.trailing.equalTo(photoImageView.snp.trailing).offset(-12)
+            make.bottom.equalTo(photoImageView.snp.bottom).offset(-12)
+            make.width.height.equalTo(50)
+        }
+
 
     }
     
