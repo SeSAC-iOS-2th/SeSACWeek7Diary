@@ -20,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: scene)
         
 
-        let vc = HomeViewController()
+        let vc = BackUpRestorationViewController()
         
         
         window?.rootViewController = UINavigationController(rootViewController: vc)

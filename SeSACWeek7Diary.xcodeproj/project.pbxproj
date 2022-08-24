@@ -11,6 +11,10 @@
 		1204DD4828AFE389004AB340 /* ImageSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1204DD4728AFE389004AB340 /* ImageSearchViewController.swift */; };
 		120EAC5828ADDF4D006730C0 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120EAC5728ADDF4D006730C0 /* UIViewController+Extension.swift */; };
 		120EAC5A28ADE5FF006730C0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120EAC5928ADE5FF006730C0 /* ProfileViewController.swift */; };
+		1210A25828B66DB500413E95 /* BackUpRestorationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1210A25728B66DB500413E95 /* BackUpRestorationViewController.swift */; };
+		1210A25A28B66E0000413E95 /* BackUpRestorationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1210A25928B66E0000413E95 /* BackUpRestorationView.swift */; };
+		1210A25E28B6764C00413E95 /* BackUpRestorationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1210A25D28B6764C00413E95 /* BackUpRestorationTableViewCell.swift */; };
+		1210A26028B679AD00413E95 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1210A25F28B679AD00413E95 /* BaseTableViewCell.swift */; };
 		1214909728AD214D008106B6 /* BaedalRaceCodeBasedAutoLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1214909628AD214D008106B6 /* BaedalRaceCodeBasedAutoLayoutViewController.swift */; };
 		12503F8F28ACBE8300A4FEBC /* KakaoTalkProfileCodeBasedAutoLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12503F8E28ACBE8300A4FEBC /* KakaoTalkProfileCodeBasedAutoLayoutViewController.swift */; };
 		12639A6228B31693002ADA38 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 12639A6128B31693002ADA38 /* Realm */; };
@@ -81,6 +85,10 @@
 		1204DD4728AFE389004AB340 /* ImageSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSearchViewController.swift; sourceTree = "<group>"; };
 		120EAC5728ADDF4D006730C0 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		120EAC5928ADE5FF006730C0 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		1210A25728B66DB500413E95 /* BackUpRestorationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackUpRestorationViewController.swift; sourceTree = "<group>"; };
+		1210A25928B66E0000413E95 /* BackUpRestorationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackUpRestorationView.swift; sourceTree = "<group>"; };
+		1210A25D28B6764C00413E95 /* BackUpRestorationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackUpRestorationTableViewCell.swift; sourceTree = "<group>"; };
+		1210A25F28B679AD00413E95 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		1214909628AD214D008106B6 /* BaedalRaceCodeBasedAutoLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaedalRaceCodeBasedAutoLayoutViewController.swift; sourceTree = "<group>"; };
 		12503F8E28ACBE8300A4FEBC /* KakaoTalkProfileCodeBasedAutoLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoTalkProfileCodeBasedAutoLayoutViewController.swift; sourceTree = "<group>"; };
 		12639A6928B319F2002ADA38 /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
@@ -136,6 +144,16 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		1210A25428B66D9400413E95 /* BackUp&Restoration */ = {
+			isa = PBXGroup;
+			children = (
+				1210A25728B66DB500413E95 /* BackUpRestorationViewController.swift */,
+				1210A25928B66E0000413E95 /* BackUpRestorationView.swift */,
+				1210A25D28B6764C00413E95 /* BackUpRestorationTableViewCell.swift */,
+			);
+			path = "BackUp&Restoration";
+			sourceTree = "<group>";
+		};
 		12639A6828B319DE002ADA38 /* Realm */ = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +195,7 @@
 		128858CD28AB1FC800919587 /* SeSACWeek7Diary */ = {
 			isa = PBXGroup;
 			children = (
+				1210A25428B66D9400413E95 /* BackUp&Restoration */,
 				12639A6828B319DE002ADA38 /* Realm */,
 				12DCC98C28AF1420008F7FAC /* Diary */,
 				12DCC98728AF125F008F7FAC /* Utility */,
@@ -230,6 +249,7 @@
 				12DCC98A28AF1272008F7FAC /* BaseViewController.swift */,
 				12DCC98F28AF16A3008F7FAC /* BaseView.swift */,
 				12639A7228B32761002ADA38 /* BaseCollectionViewCell.swift */,
+				1210A25F28B679AD00413E95 /* BaseTableViewCell.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -367,11 +387,14 @@
 				120EAC5828ADDF4D006730C0 /* UIViewController+Extension.swift in Sources */,
 				12DCC99228AF1797008F7FAC /* WriteView.swift in Sources */,
 				12639A6A28B319F2002ADA38 /* RealmModel.swift in Sources */,
+				1210A25E28B6764C00413E95 /* BackUpRestorationTableViewCell.swift in Sources */,
 				128858CF28AB1FC800919587 /* AppDelegate.swift in Sources */,
 				1204DD4428AFE380004AB340 /* ImageSearchView.swift in Sources */,
 				12DCC99028AF16A3008F7FAC /* BaseView.swift in Sources */,
 				1276F39B28AC8C0B00B03C86 /* CodeSnap2ViewController.swift in Sources */,
 				120EAC5A28ADE5FF006730C0 /* ProfileViewController.swift in Sources */,
+				1210A25A28B66E0000413E95 /* BackUpRestorationView.swift in Sources */,
+				1210A25828B66DB500413E95 /* BackUpRestorationViewController.swift in Sources */,
 				12DCC98B28AF1272008F7FAC /* BaseViewController.swift in Sources */,
 				128858D128AB1FC800919587 /* SceneDelegate.swift in Sources */,
 				12639A7528B32A9B002ADA38 /* HomeViewController.swift in Sources */,
@@ -388,6 +411,7 @@
 				12639A6C28B326DF002ADA38 /* ImageDummyData.swift in Sources */,
 				12DCC98E28AF1441008F7FAC /* WriteViewController.swift in Sources */,
 				12639A6E28B326FA002ADA38 /* ImageSearchCollectionViewCell.swift in Sources */,
+				1210A26028B679AD00413E95 /* BaseTableViewCell.swift in Sources */,
 				1288590728AB3A9600919587 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
