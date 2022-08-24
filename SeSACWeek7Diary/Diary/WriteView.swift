@@ -96,6 +96,11 @@ class WriteView: BaseView {
             make.width.height.equalTo(50)
         }
 
+        sampleButton.snp.makeConstraints { make in
+            make.trailing.equalTo(photoImageView.snp.trailing).offset(12)
+            make.bottom.equalTo(photoImageView.snp.top).offset(32)
+            make.width.height.equalTo(50)
+        }
 
     }
     

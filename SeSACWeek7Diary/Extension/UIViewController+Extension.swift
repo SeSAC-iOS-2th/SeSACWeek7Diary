@@ -10,12 +10,28 @@ import UIKit
 
 extension UIViewController {
     
-    func transitionViewController<T: UIViewController>(storyboard: String, viewController vc: T) {
+    enum TransitionStyle {
+        case present //네비게이션 없이 Present
+        case presentNavigation //네비게이션 임베드 Present
+        case presentFullNavigation //네비게이션 풀스크린
+        case push
+    }
+    
+    func transitionViewController<T: UIViewController>(_ viewController: T, transitionStyle: TransitionStyle = .present) {
         
-        let sb = UIStoryboard(name: storyboard, bundle: nil)
-        guard let controller = sb.instantiateViewController(withIdentifier: String(describing: vc)) as? T else { return }
-        
-        self.present(controller, animated: true)
+        switch transitionStyle {
+        case .present:
+            self.present(viewController, animated: true)
+        case .presentNavigation:
+            let navi = UINavigationController(rootViewController: viewController)
+            self.present(navi, animated: true)
+        case .push:
+            self.navigationController?.pushViewController(viewController, animated: true)
+        case .presentFullNavigation:
+            let navi = UINavigationController(rootViewController: viewController)
+            navi.modalPresentationStyle = .fullScreen
+            self.present(navi, animated: true)
+        }
     }
     
     
