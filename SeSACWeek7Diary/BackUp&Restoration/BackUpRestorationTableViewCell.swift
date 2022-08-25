@@ -21,9 +21,16 @@ class BackUpRestorationTableViewCell: BaseTableViewCell {
        return view
     }()
     
+    let filePath: UILabel = {
+        let view = UILabel()
+        view.textAlignment = .center
+        view.text = "백업 파일 경로"
+        return view
+    }()
+    
     
     override func configure() {
-        [tagLabel].forEach {
+        [tagLabel, filePath].forEach {
             self.addSubview($0)
         }
     }
@@ -33,6 +40,12 @@ class BackUpRestorationTableViewCell: BaseTableViewCell {
             make.leading.equalTo(20)
             make.centerY.equalTo(self)
             make.height.width.equalTo(20)
+        }
+        
+        filePath.snp.makeConstraints { make in
+            make.leading.equalTo(tagLabel.snp.trailing).offset(20)
+            make.centerY.equalTo(self)
+            make.height.equalTo(20)
         }
     }
     

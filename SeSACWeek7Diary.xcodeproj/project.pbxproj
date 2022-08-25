@@ -29,6 +29,8 @@
 		1276F39628AC822900B03C86 /* CodeSnapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1276F39528AC822900B03C86 /* CodeSnapViewController.swift */; };
 		1276F39928AC828300B03C86 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1276F39828AC828300B03C86 /* SnapKit */; };
 		1276F39B28AC8C0B00B03C86 /* CodeSnap2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1276F39A28AC8C0B00B03C86 /* CodeSnap2ViewController.swift */; };
+		128356CB28B6FD7B002AB3B2 /* FileManager+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128356CA28B6FD7B002AB3B2 /* FileManager+Extension.swift */; };
+		128356D028B70164002AB3B2 /* Zip in Frameworks */ = {isa = PBXBuildFile; productRef = 128356CF28B70164002AB3B2 /* Zip */; };
 		128858CF28AB1FC800919587 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128858CE28AB1FC800919587 /* AppDelegate.swift */; };
 		128858D128AB1FC800919587 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128858D028AB1FC800919587 /* SceneDelegate.swift */; };
 		128858D328AB1FC800919587 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128858D228AB1FC800919587 /* ViewController.swift */; };
@@ -99,6 +101,7 @@
 		1276F39228AC71AF00B03C86 /* CodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeViewController.swift; sourceTree = "<group>"; };
 		1276F39528AC822900B03C86 /* CodeSnapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeSnapViewController.swift; sourceTree = "<group>"; };
 		1276F39A28AC8C0B00B03C86 /* CodeSnap2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeSnap2ViewController.swift; sourceTree = "<group>"; };
+		128356CA28B6FD7B002AB3B2 /* FileManager+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Extension.swift"; sourceTree = "<group>"; };
 		128858CB28AB1FC800919587 /* SeSACWeek7Diary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSACWeek7Diary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		128858CE28AB1FC800919587 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		128858D028AB1FC800919587 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -125,6 +128,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				128356D028B70164002AB3B2 /* Zip in Frameworks */,
 				12639A6428B31693002ADA38 /* RealmSwift in Frameworks */,
 				12639A6228B31693002ADA38 /* Realm in Frameworks */,
 				128858FE28AB2C6000919587 /* SeSACUIFramework.framework in Frameworks */,
@@ -140,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				120EAC5728ADDF4D006730C0 /* UIViewController+Extension.swift */,
+				128356CA28B6FD7B002AB3B2 /* FileManager+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -298,6 +303,7 @@
 				12639A6128B31693002ADA38 /* Realm */,
 				12639A6328B31693002ADA38 /* RealmSwift */,
 				12639A7028B32734002ADA38 /* Kingfisher */,
+				128356CF28B70164002AB3B2 /* Zip */,
 			);
 			productName = SeSACWeek7Diary;
 			productReference = 128858CB28AB1FC800919587 /* SeSACWeek7Diary.app */;
@@ -331,6 +337,7 @@
 				1276F39728AC828300B03C86 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				12639A6028B31693002ADA38 /* XCRemoteSwiftPackageReference "realm-swift" */,
 				12639A6F28B32734002ADA38 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				128356CE28B70164002AB3B2 /* XCRemoteSwiftPackageReference "Zip" */,
 			);
 			productRefGroup = 128858CC28AB1FC800919587 /* Products */;
 			projectDirPath = "";
@@ -395,6 +402,7 @@
 				120EAC5A28ADE5FF006730C0 /* ProfileViewController.swift in Sources */,
 				1210A25A28B66E0000413E95 /* BackUpRestorationView.swift in Sources */,
 				1210A25828B66DB500413E95 /* BackUpRestorationViewController.swift in Sources */,
+				128356CB28B6FD7B002AB3B2 /* FileManager+Extension.swift in Sources */,
 				12DCC98B28AF1272008F7FAC /* BaseViewController.swift in Sources */,
 				128858D128AB1FC800919587 /* SceneDelegate.swift in Sources */,
 				12639A7528B32A9B002ADA38 /* HomeViewController.swift in Sources */,
@@ -656,6 +664,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		128356CE28B70164002AB3B2 /* XCRemoteSwiftPackageReference "Zip" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/marmelroy/Zip.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -678,6 +694,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1276F39728AC828300B03C86 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		128356CF28B70164002AB3B2 /* Zip */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 128356CE28B70164002AB3B2 /* XCRemoteSwiftPackageReference "Zip" */;
+			productName = Zip;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
