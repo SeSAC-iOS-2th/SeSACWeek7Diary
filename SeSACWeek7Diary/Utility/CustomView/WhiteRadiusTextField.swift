@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BlackRadiusTextField: UITextField {
+class WhiteRadiusTextField: UITextField {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -19,7 +19,7 @@ class BlackRadiusTextField: UITextField {
     }
     
     func setupView() {
-        backgroundColor = .clear
+        backgroundColor = .white
         textAlignment = .center
         borderStyle = .none
         layer.cornerRadius = 8

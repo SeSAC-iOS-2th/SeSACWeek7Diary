@@ -29,15 +29,13 @@ class ImageSearchView: BaseView {
     }
     
     override func setConstraints() {
-//        searchBar.snp.makeConstraints { make in
-//            make.trailing.leading.equalTo(0)
-//            make.top.equalTo(safeAreaLayoutGuide)
-//        }
-        
-        collectionView.snp.makeConstraints { make in
+        searchBar.snp.makeConstraints { make in
             make.trailing.leading.equalTo(0)
             make.top.equalTo(safeAreaLayoutGuide)
-
+        }
+        
+        collectionView.snp.makeConstraints { make in
+            make.edges.equalTo(self.safeAreaLayoutGuide)
         }
     }
     

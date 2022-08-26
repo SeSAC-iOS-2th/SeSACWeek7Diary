@@ -16,6 +16,11 @@
 		1210A25E28B6764C00413E95 /* BackUpRestorationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1210A25D28B6764C00413E95 /* BackUpRestorationTableViewCell.swift */; };
 		1210A26028B679AD00413E95 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1210A25F28B679AD00413E95 /* BaseTableViewCell.swift */; };
 		1214909728AD214D008106B6 /* BaedalRaceCodeBasedAutoLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1214909628AD214D008106B6 /* BaedalRaceCodeBasedAutoLayoutViewController.swift */; };
+		1229CDDC28B911DE00D008B9 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1229CDDB28B911DE00D008B9 /* BaseTabBarController.swift */; };
+		1229CDE028B9130000D008B9 /* DiaryTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1229CDDF28B9130000D008B9 /* DiaryTabBarController.swift */; };
+		1229CDE228B9170300D008B9 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1229CDE128B9170300D008B9 /* SettingViewController.swift */; };
+		1229CDE628B9184D00D008B9 /* DiarySearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1229CDE528B9184D00D008B9 /* DiarySearchViewController.swift */; };
+		1229CDE828B9188E00D008B9 /* DiarySearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1229CDE728B9188E00D008B9 /* DiarySearchView.swift */; };
 		124B2C9F28B84D5A00812FDB /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124B2C9E28B84D5A00812FDB /* HomeTableViewCell.swift */; };
 		124B2CA328B8558A00812FDB /* UserDiaryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124B2CA228B8558A00812FDB /* UserDiaryRepository.swift */; };
 		124B2CA628B8619500812FDB /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 124B2CA528B8619500812FDB /* FSCalendar */; };
@@ -51,7 +56,7 @@
 		12DCC98E28AF1441008F7FAC /* WriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DCC98D28AF1441008F7FAC /* WriteViewController.swift */; };
 		12DCC99028AF16A3008F7FAC /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DCC98F28AF16A3008F7FAC /* BaseView.swift */; };
 		12DCC99228AF1797008F7FAC /* WriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DCC99128AF1797008F7FAC /* WriteView.swift */; };
-		12DCC99528AF2CFC008F7FAC /* BlackRadiusTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DCC99428AF2CFC008F7FAC /* BlackRadiusTextField.swift */; };
+		12DCC99528AF2CFC008F7FAC /* WhiteRadiusTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DCC99428AF2CFC008F7FAC /* WhiteRadiusTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +100,11 @@
 		1210A25D28B6764C00413E95 /* BackUpRestorationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackUpRestorationTableViewCell.swift; sourceTree = "<group>"; };
 		1210A25F28B679AD00413E95 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		1214909628AD214D008106B6 /* BaedalRaceCodeBasedAutoLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaedalRaceCodeBasedAutoLayoutViewController.swift; sourceTree = "<group>"; };
+		1229CDDB28B911DE00D008B9 /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
+		1229CDDF28B9130000D008B9 /* DiaryTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryTabBarController.swift; sourceTree = "<group>"; };
+		1229CDE128B9170300D008B9 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		1229CDE528B9184D00D008B9 /* DiarySearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiarySearchViewController.swift; sourceTree = "<group>"; };
+		1229CDE728B9188E00D008B9 /* DiarySearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiarySearchView.swift; sourceTree = "<group>"; };
 		124B2C9E28B84D5A00812FDB /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		124B2CA228B8558A00812FDB /* UserDiaryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDiaryRepository.swift; sourceTree = "<group>"; };
 		12503F8E28ACBE8300A4FEBC /* KakaoTalkProfileCodeBasedAutoLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoTalkProfileCodeBasedAutoLayoutViewController.swift; sourceTree = "<group>"; };
@@ -125,7 +135,7 @@
 		12DCC98D28AF1441008F7FAC /* WriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteViewController.swift; sourceTree = "<group>"; };
 		12DCC98F28AF16A3008F7FAC /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		12DCC99128AF1797008F7FAC /* WriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteView.swift; sourceTree = "<group>"; };
-		12DCC99428AF2CFC008F7FAC /* BlackRadiusTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackRadiusTextField.swift; sourceTree = "<group>"; };
+		12DCC99428AF2CFC008F7FAC /* WhiteRadiusTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteRadiusTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -262,6 +272,7 @@
 				12DCC98F28AF16A3008F7FAC /* BaseView.swift */,
 				12639A7228B32761002ADA38 /* BaseCollectionViewCell.swift */,
 				1210A25F28B679AD00413E95 /* BaseTableViewCell.swift */,
+				1229CDDB28B911DE00D008B9 /* BaseTabBarController.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -277,6 +288,10 @@
 				12639A6D28B326FA002ADA38 /* ImageSearchCollectionViewCell.swift */,
 				12639A7428B32A9B002ADA38 /* HomeViewController.swift */,
 				124B2C9E28B84D5A00812FDB /* HomeTableViewCell.swift */,
+				1229CDDF28B9130000D008B9 /* DiaryTabBarController.swift */,
+				1229CDE128B9170300D008B9 /* SettingViewController.swift */,
+				1229CDE528B9184D00D008B9 /* DiarySearchViewController.swift */,
+				1229CDE728B9188E00D008B9 /* DiarySearchView.swift */,
 			);
 			path = Diary;
 			sourceTree = "<group>";
@@ -284,7 +299,7 @@
 		12DCC99328AF2CD9008F7FAC /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
-				12DCC99428AF2CFC008F7FAC /* BlackRadiusTextField.swift */,
+				12DCC99428AF2CFC008F7FAC /* WhiteRadiusTextField.swift */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -404,8 +419,10 @@
 				120EAC5828ADDF4D006730C0 /* UIViewController+Extension.swift in Sources */,
 				12DCC99228AF1797008F7FAC /* WriteView.swift in Sources */,
 				12639A6A28B319F2002ADA38 /* RealmModel.swift in Sources */,
+				1229CDDC28B911DE00D008B9 /* BaseTabBarController.swift in Sources */,
 				124B2CA328B8558A00812FDB /* UserDiaryRepository.swift in Sources */,
 				1210A25E28B6764C00413E95 /* BackUpRestorationTableViewCell.swift in Sources */,
+				1229CDE628B9184D00D008B9 /* DiarySearchViewController.swift in Sources */,
 				128858CF28AB1FC800919587 /* AppDelegate.swift in Sources */,
 				1204DD4428AFE380004AB340 /* ImageSearchView.swift in Sources */,
 				12DCC99028AF16A3008F7FAC /* BaseView.swift in Sources */,
@@ -417,10 +434,12 @@
 				12DCC98B28AF1272008F7FAC /* BaseViewController.swift in Sources */,
 				128858D128AB1FC800919587 /* SceneDelegate.swift in Sources */,
 				12639A7528B32A9B002ADA38 /* HomeViewController.swift in Sources */,
-				12DCC99528AF2CFC008F7FAC /* BlackRadiusTextField.swift in Sources */,
+				12DCC99528AF2CFC008F7FAC /* WhiteRadiusTextField.swift in Sources */,
 				1214909728AD214D008106B6 /* BaedalRaceCodeBasedAutoLayoutViewController.swift in Sources */,
+				1229CDE028B9130000D008B9 /* DiaryTabBarController.swift in Sources */,
 				1288590928AB40DC00919587 /* SecondViewController.swift in Sources */,
 				12503F8F28ACBE8300A4FEBC /* KakaoTalkProfileCodeBasedAutoLayoutViewController.swift in Sources */,
+				1229CDE228B9170300D008B9 /* SettingViewController.swift in Sources */,
 				12639A7328B32761002ADA38 /* BaseCollectionViewCell.swift in Sources */,
 				1276F39628AC822900B03C86 /* CodeSnapViewController.swift in Sources */,
 				1288590B28AB40E300919587 /* ThirdViewController.swift in Sources */,
@@ -428,6 +447,7 @@
 				1204DD4828AFE389004AB340 /* ImageSearchViewController.swift in Sources */,
 				1288590D28AB412600919587 /* WalkThroughViewController.swift in Sources */,
 				12639A6C28B326DF002ADA38 /* ImageDummyData.swift in Sources */,
+				1229CDE828B9188E00D008B9 /* DiarySearchView.swift in Sources */,
 				12DCC98E28AF1441008F7FAC /* WriteViewController.swift in Sources */,
 				12639A6E28B326FA002ADA38 /* ImageSearchCollectionViewCell.swift in Sources */,
 				1210A26028B679AD00413E95 /* BaseTableViewCell.swift in Sources */,

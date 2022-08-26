@@ -28,7 +28,7 @@ class ImageSearchViewController: BaseViewController {
     override func configure() {
         mainView.collectionView.dataSource = self
         mainView.collectionView.delegate = self
-        mainView.collectionView.register(ImageSearchCollectionViewCell.self, forCellWithReuseIdentifier: ImageSearchCollectionViewCell.reuseIdentifier)
+        mainView.collectionView.register(ImageSearchCollectionViewCell.self, forCellWithReuseIdentifier: "ImageSearchCollectionViewCell")
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "xmark"), style: .plain, target: self, action: #selector(closeButtonClicked))
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "선택", style: .plain, target: self, action: #selector(selectButtonClicked))
 
@@ -60,7 +60,7 @@ extension ImageSearchViewController: UICollectionViewDataSource, UICollectionVie
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ImageSearchCollectionViewCell.reuseIdentifier, for: indexPath) as? ImageSearchCollectionViewCell else { return UICollectionViewCell() }
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImageSearchCollectionViewCell", for: indexPath) as? ImageSearchCollectionViewCell else { return UICollectionViewCell() }
 
         cell.layer.borderWidth = selectIndexPath == indexPath ? 4 : 0
         cell.layer.borderColor = selectIndexPath == indexPath ? UIColor.black.cgColor : nil

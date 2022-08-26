@@ -25,10 +25,11 @@ class HomeViewController: BaseViewController {
     
     lazy var tableView: UITableView = {
         let view = UITableView()
-        view.rowHeight = 100
         view.delegate = self
         view.dataSource = self
-        view.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        view.register(HomeTableViewCell.self, forCellReuseIdentifier: "HomeTableViewCell")
+        view.rowHeight = 180
+        view.backgroundColor = .lightGray
         return view
     }() //즉시 실행 클로저
     
@@ -49,6 +50,8 @@ class HomeViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        view.backgroundColor = .white
         
         //Realm 3. Realm 데이터를 정렬해 tasks에 담기
         tasks = repository.localRealm.objects(UserDiary.self).sorted(byKeyPath: "diaryDate", ascending: false)
@@ -77,13 +80,14 @@ class HomeViewController: BaseViewController {
     }
     
     override func setConstraints() {
-        tableView.snp.makeConstraints { make in
-            make.leading.bottom.trailing.equalTo(view.safeAreaLayoutGuide)
-            make.topMargin.equalTo(300)
-        }
         calendar.snp.makeConstraints { make in
             make.leading.top.trailing.equalTo(view.safeAreaLayoutGuide)
             make.height.equalTo(300)
+        }
+        
+        tableView.snp.makeConstraints { make in
+            make.leading.bottom.trailing.equalTo(view.safeAreaLayoutGuide)
+            make.topMargin.equalTo(300)
         }
     }
     
@@ -94,7 +98,28 @@ class HomeViewController: BaseViewController {
     }
     
     @objc func sortButtonClicked() {
-        tasks = repository.fetchSort("regdate")
+        let alert = UIAlertController()
+        let title = UIAlertAction(title: "제목 순", style: .default) { _ in
+            self.tasks = self.repository.fetchSort("diaryTitle")
+            self.tableView.reloadData()
+        }
+        let writeDate = UIAlertAction(title: "작성 날짜 순", style: .default) { _ in
+            self.tasks = self.repository.fetchSort("diaryDate")
+            self.tableView.reloadData()
+        }
+        let bookMark = UIAlertAction(title: "즐겨찾기 순", style: .default) { _ in
+            self.tasks = self.repository.fetchSort("bookMark")
+            self.tableView.reloadData()
+        }
+        
+        let cancel = UIAlertAction(title: "취소", style: .cancel)
+        
+        alert.addAction(title)
+        alert.addAction(writeDate)
+        alert.addAction(bookMark)
+        alert.addAction(cancel)
+        
+        self.present(alert, animated: true)
     }
     
     //realm filter query, NSPredicate
@@ -111,9 +136,9 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")! //as? HomeTableViewCell else { return UITableViewCell() }
-        //cell.diaryImageView.image = loadImageFromDocument(fileName: "\(tasks[indexPath.row].objectId).jpg")
-        //cell.setData(data: tasks[indexPath.row])
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "HomeTableViewCell") as? HomeTableViewCell else { return UITableViewCell() }
+        cell.diaryImageView.image = loadImageFromDocument(fileName: "\(tasks[indexPath.row].objectId).jpg")
+        cell.setData(data: tasks[indexPath.row])
         return cell
     }
     

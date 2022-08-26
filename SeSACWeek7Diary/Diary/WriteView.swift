@@ -16,14 +16,14 @@ class WriteView: BaseView {
         return view
     }()
     
-    let titleTextField: BlackRadiusTextField = {
-        let view = BlackRadiusTextField()
+    let titleTextField: WhiteRadiusTextField = {
+        let view = WhiteRadiusTextField()
         view.placeholder = "제목을 입력해주세요"
         return view
     }()
     
-    let dateTextField: BlackRadiusTextField = {
-        let view = BlackRadiusTextField()
+    let dateTextField: WhiteRadiusTextField = {
+        let view = WhiteRadiusTextField()
         view.placeholder = "날짜를 입력해주세요"
         return view
     }()

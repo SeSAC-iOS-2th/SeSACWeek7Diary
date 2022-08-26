@@ -16,30 +16,26 @@ protocol UserDiaryRepositoryType {
     func fetchFilter() -> Results<UserDiary>
     func fetchDate(date: Date) -> Results<UserDiary>
     func updateBookMark(item: UserDiary)
+    func createItem(item: UserDiary)
     func deleteItem(item: UserDiary)
-    func addItem(item: UserDiary)
     
 }
 
 
 class UserDiaryRepository : UserDiaryRepositoryType {
     
+    let localRealm = try! Realm() // struct => singleTon이 의미 없는 이유?
+    
     func fetchDate(date: Date) -> Results<UserDiary> {
         return localRealm.objects(UserDiary.self).filter("diaryDate >= %@ AND diaryDate < %@", date, Date(timeInterval: 86400, since: date)) //NSPredicate
     }
-    
-    func addItem(item: UserDiary) {
-        
-    }
-    
-    let localRealm = try! Realm() // struct => singleTon이 의미 없는 이유?
-    
+            
     func fetch() -> Results<UserDiary> {
         return localRealm.objects(UserDiary.self).sorted(byKeyPath: "diaryDate", ascending: false)
     }
     
     func fetchSort(_ sort: String) -> Results<UserDiary> {
-        return localRealm.objects(UserDiary.self).sorted(byKeyPath: sort, ascending: true)
+        return localRealm.objects(UserDiary.self).sorted(byKeyPath: sort, ascending: false)
     }
     
     func fetchFilter() -> Results<UserDiary> {
@@ -61,6 +57,17 @@ class UserDiaryRepository : UserDiaryRepositoryType {
             
             print("Realm Update Succeed, reloadRows 필요")
         }
+    }
+    
+    func createItem(item: UserDiary) {
+        do {
+            try localRealm.write {
+                localRealm.add(item)
+            }
+        } catch let error {
+            print(error)
+        }
+        
     }
     
     func deleteItem(item: UserDiary) {

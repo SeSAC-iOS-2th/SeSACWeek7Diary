@@ -16,7 +16,8 @@ protocol SelectImageDelegate {
 //final => static dispatch 방식으로 바뀌기 때문에, 성능이 향상됨!
 final class WriteViewController: BaseViewController {
     
-
+    let repository = UserDiaryRepository()
+    
     let mainView = WriteView()
     private let localRealm = try! Realm() //Realm 테이블에 데이터를 CRUD할 때, Realm 테이블 경로에 접근
     
@@ -27,7 +28,7 @@ final class WriteViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .black
-        print("Realm is located at:", localRealm.configuration.fileURL!)
+//        print("Realm is located at:", localRealm.configuration.fileURL!)
     }
     
     override func configure() {
@@ -52,14 +53,7 @@ final class WriteViewController: BaseViewController {
         
         let task = UserDiary(diaryTitle: title, diaryContent: mainView.contentTextView.text!, diaryDate: Date(), regdate: Date(), imageURL: nil)
         
-        do {
-            try localRealm.write {
-                localRealm.add(task)
-            }
-        } catch let error {
-            print(error)
-        }
-        
+        self.repository.createItem(item: task)
         if let image = mainView.photoImageView.image {
             saveImageToDocument(fileName: "\(task.objectId).jpg", image: image)
         }
@@ -73,10 +67,8 @@ final class WriteViewController: BaseViewController {
         
         let task = UserDiary(diaryTitle: "가오늘의 일기\(Int.random(in: 1...1000))", diaryContent: "일기 테스트 내용", diaryDate: Date(), regdate: Date(), imageURL: nil) // => Record
         
-        try! localRealm.write {
-            localRealm.add(task) //Create
-            print("Realm Succeed")
-        }
+        self.repository.createItem(item: task)
+        
     }
     
 //    @objc func titleTextFieldClicked(_ textField: UITextField) {
