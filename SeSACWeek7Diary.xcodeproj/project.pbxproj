@@ -16,6 +16,9 @@
 		1210A25E28B6764C00413E95 /* BackUpRestorationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1210A25D28B6764C00413E95 /* BackUpRestorationTableViewCell.swift */; };
 		1210A26028B679AD00413E95 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1210A25F28B679AD00413E95 /* BaseTableViewCell.swift */; };
 		1214909728AD214D008106B6 /* BaedalRaceCodeBasedAutoLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1214909628AD214D008106B6 /* BaedalRaceCodeBasedAutoLayoutViewController.swift */; };
+		124B2C9F28B84D5A00812FDB /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124B2C9E28B84D5A00812FDB /* HomeTableViewCell.swift */; };
+		124B2CA328B8558A00812FDB /* UserDiaryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124B2CA228B8558A00812FDB /* UserDiaryRepository.swift */; };
+		124B2CA628B8619500812FDB /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 124B2CA528B8619500812FDB /* FSCalendar */; };
 		12503F8F28ACBE8300A4FEBC /* KakaoTalkProfileCodeBasedAutoLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12503F8E28ACBE8300A4FEBC /* KakaoTalkProfileCodeBasedAutoLayoutViewController.swift */; };
 		12639A6228B31693002ADA38 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 12639A6128B31693002ADA38 /* Realm */; };
 		12639A6428B31693002ADA38 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 12639A6328B31693002ADA38 /* RealmSwift */; };
@@ -92,6 +95,8 @@
 		1210A25D28B6764C00413E95 /* BackUpRestorationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackUpRestorationTableViewCell.swift; sourceTree = "<group>"; };
 		1210A25F28B679AD00413E95 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		1214909628AD214D008106B6 /* BaedalRaceCodeBasedAutoLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaedalRaceCodeBasedAutoLayoutViewController.swift; sourceTree = "<group>"; };
+		124B2C9E28B84D5A00812FDB /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		124B2CA228B8558A00812FDB /* UserDiaryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDiaryRepository.swift; sourceTree = "<group>"; };
 		12503F8E28ACBE8300A4FEBC /* KakaoTalkProfileCodeBasedAutoLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoTalkProfileCodeBasedAutoLayoutViewController.swift; sourceTree = "<group>"; };
 		12639A6928B319F2002ADA38 /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
 		12639A6B28B326DF002ADA38 /* ImageDummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDummyData.swift; sourceTree = "<group>"; };
@@ -133,6 +138,7 @@
 				12639A6228B31693002ADA38 /* Realm in Frameworks */,
 				128858FE28AB2C6000919587 /* SeSACUIFramework.framework in Frameworks */,
 				1276F39928AC828300B03C86 /* SnapKit in Frameworks */,
+				124B2CA628B8619500812FDB /* FSCalendar in Frameworks */,
 				12639A7128B32734002ADA38 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -163,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				12639A6928B319F2002ADA38 /* RealmModel.swift */,
+				124B2CA228B8558A00812FDB /* UserDiaryRepository.swift */,
 			);
 			path = Realm;
 			sourceTree = "<group>";
@@ -269,6 +276,7 @@
 				12639A6B28B326DF002ADA38 /* ImageDummyData.swift */,
 				12639A6D28B326FA002ADA38 /* ImageSearchCollectionViewCell.swift */,
 				12639A7428B32A9B002ADA38 /* HomeViewController.swift */,
+				124B2C9E28B84D5A00812FDB /* HomeTableViewCell.swift */,
 			);
 			path = Diary;
 			sourceTree = "<group>";
@@ -304,6 +312,7 @@
 				12639A6328B31693002ADA38 /* RealmSwift */,
 				12639A7028B32734002ADA38 /* Kingfisher */,
 				128356CF28B70164002AB3B2 /* Zip */,
+				124B2CA528B8619500812FDB /* FSCalendar */,
 			);
 			productName = SeSACWeek7Diary;
 			productReference = 128858CB28AB1FC800919587 /* SeSACWeek7Diary.app */;
@@ -338,6 +347,7 @@
 				12639A6028B31693002ADA38 /* XCRemoteSwiftPackageReference "realm-swift" */,
 				12639A6F28B32734002ADA38 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				128356CE28B70164002AB3B2 /* XCRemoteSwiftPackageReference "Zip" */,
+				124B2CA428B8619500812FDB /* XCRemoteSwiftPackageReference "FSCalendar" */,
 			);
 			productRefGroup = 128858CC28AB1FC800919587 /* Products */;
 			projectDirPath = "";
@@ -394,6 +404,7 @@
 				120EAC5828ADDF4D006730C0 /* UIViewController+Extension.swift in Sources */,
 				12DCC99228AF1797008F7FAC /* WriteView.swift in Sources */,
 				12639A6A28B319F2002ADA38 /* RealmModel.swift in Sources */,
+				124B2CA328B8558A00812FDB /* UserDiaryRepository.swift in Sources */,
 				1210A25E28B6764C00413E95 /* BackUpRestorationTableViewCell.swift in Sources */,
 				128858CF28AB1FC800919587 /* AppDelegate.swift in Sources */,
 				1204DD4428AFE380004AB340 /* ImageSearchView.swift in Sources */,
@@ -420,6 +431,7 @@
 				12DCC98E28AF1441008F7FAC /* WriteViewController.swift in Sources */,
 				12639A6E28B326FA002ADA38 /* ImageSearchCollectionViewCell.swift in Sources */,
 				1210A26028B679AD00413E95 /* BaseTableViewCell.swift in Sources */,
+				124B2C9F28B84D5A00812FDB /* HomeTableViewCell.swift in Sources */,
 				1288590728AB3A9600919587 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -640,6 +652,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		124B2CA428B8619500812FDB /* XCRemoteSwiftPackageReference "FSCalendar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WenchaoD/FSCalendar.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 		12639A6028B31693002ADA38 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-swift.git";
@@ -675,6 +695,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		124B2CA528B8619500812FDB /* FSCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 124B2CA428B8619500812FDB /* XCRemoteSwiftPackageReference "FSCalendar" */;
+			productName = FSCalendar;
+		};
 		12639A6128B31693002ADA38 /* Realm */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 12639A6028B31693002ADA38 /* XCRemoteSwiftPackageReference "realm-swift" */;

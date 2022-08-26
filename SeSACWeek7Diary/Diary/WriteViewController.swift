@@ -12,11 +12,13 @@ protocol SelectImageDelegate {
     func sendImageData(image: UIImage)
 }
 
-class WriteViewController: BaseViewController {
+//final 키워드를 사용하면 그 클래스는 상속 불가능!
+//final => static dispatch 방식으로 바뀌기 때문에, 성능이 향상됨!
+final class WriteViewController: BaseViewController {
     
 
     let mainView = WriteView()
-    let localRealm = try! Realm() //Realm 테이블에 데이터를 CRUD할 때, Realm 테이블 경로에 접근
+    private let localRealm = try! Realm() //Realm 테이블에 데이터를 CRUD할 때, Realm 테이블 경로에 접근
     
     override func loadView() { //super.loadView X
         self.view = mainView

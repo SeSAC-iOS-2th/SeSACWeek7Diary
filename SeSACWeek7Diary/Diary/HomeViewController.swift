@@ -9,10 +9,19 @@ import Foundation
 import UIKit
 import SnapKit
 import RealmSwift //Realm 1. import
+import FSCalendar
 
 class HomeViewController: BaseViewController {
     
-    let localRealm = try! Realm() //Realm 2.
+    let repository = UserDiaryRepository()
+    
+    lazy var calendar: FSCalendar = {
+        let view = FSCalendar()
+        view.delegate = self
+        view.dataSource = self
+        view.backgroundColor = .white
+        return view
+    }()
     
     lazy var tableView: UITableView = {
         let view = UITableView()
@@ -22,6 +31,12 @@ class HomeViewController: BaseViewController {
         view.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         return view
     }() //즉시 실행 클로저
+    
+    let formatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyMMdd"
+        return formatter
+    }()
     
     var tasks: Results<UserDiary>! {
         didSet {
@@ -36,7 +51,7 @@ class HomeViewController: BaseViewController {
         super.viewDidLoad()
         
         //Realm 3. Realm 데이터를 정렬해 tasks에 담기
-        tasks = localRealm.objects(UserDiary.self).sorted(byKeyPath: "diaryDate", ascending: false)
+        tasks = repository.localRealm.objects(UserDiary.self).sorted(byKeyPath: "diaryDate", ascending: false)
                 
     }
     
@@ -47,11 +62,13 @@ class HomeViewController: BaseViewController {
     }
     
     func fetchRealm() {
-        tasks = localRealm.objects(UserDiary.self).sorted(byKeyPath: "diaryDate", ascending: false)
+        tasks = repository.fetch()
     }
     
     override func configure() {
         view.addSubview(tableView)
+        view.addSubview(calendar)
+        
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: #selector(plusButtonclicked))
         
         let sortButton = UIBarButtonItem(title: "정렬", style: .plain, target: self, action: #selector(sortButtonClicked))
@@ -61,7 +78,12 @@ class HomeViewController: BaseViewController {
     
     override func setConstraints() {
         tableView.snp.makeConstraints { make in
-            make.edges.equalTo(view.safeAreaLayoutGuide)
+            make.leading.bottom.trailing.equalTo(view.safeAreaLayoutGuide)
+            make.topMargin.equalTo(300)
+        }
+        calendar.snp.makeConstraints { make in
+            make.leading.top.trailing.equalTo(view.safeAreaLayoutGuide)
+            make.height.equalTo(300)
         }
     }
     
@@ -72,13 +94,12 @@ class HomeViewController: BaseViewController {
     }
     
     @objc func sortButtonClicked() {
-        tasks = localRealm.objects(UserDiary.self).sorted(byKeyPath: "regdate", ascending: true)
+        tasks = repository.fetchSort("regdate")
     }
     
     //realm filter query, NSPredicate
     @objc func filterButtonClicked() {
-        tasks = localRealm.objects(UserDiary.self).filter("diaryTitle CONTAINS[c] 'a'")
-        //filter("diaryTitle = '오늘의 일기171'")
+        tasks = repository.fetchFilter()
     }
     
     
@@ -102,19 +123,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         
         let bookMark = UIContextualAction(style: .normal, title: nil) { action, view, completionHandler in
             //realm data update
-            try! self.localRealm.write {
-                //하나의 레코드에서 특정 컬럼 하나만 변경
-                //self.tasks[indexPath.row].bookMark =! self.tasks[indexPath.row].bookMark
-                
-                //하나의 테이블에 특정 컬럼 전체 값을 변경
-                //self.tasks.setValue(true, forKey: "bookMark")
-                
-                //하나의 레코드에서 여러 컬럼들이 변경
-                //self.localRealm.create(UserDiary.self, value: ["objectId": self.tasks[indexPath.row].objectId, "diaryContent": "변경 테스트", "diaryTitle": "제목임"], update: .modified)
-                
-                print("Realm Update Succeed, reloadRows 필요")
-            }
-            
+            self.repository.updateBookMark(item: self.tasks[indexPath.row])
             //1. 스와이프 셀 하나만 ReloadRows 코드를 구현
             //2. 데이터가 변경됐으니 다시 realm에서 데이터를 가지고 오기
             self.fetchRealm()
@@ -131,15 +140,44 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
-        let bookmark = UIContextualAction(style: .normal, title: "즐겨찾기") { action, view, completionHandler in
-            print("bookmark Button Clicked")
+        let bookMark = UIContextualAction(style: .normal, title: "삭제") { action, view, completionHandler in
+            
+            let task = self.tasks[indexPath.row]
+            self.repository.deleteItem(item: task)
+            
+            //self.fetchRealm()
+            
         }
         
-        let example = UIContextualAction(style: .normal, title: "예시") { action, view, completionHandler in
-            print("example Button Clicked")
-        }
         
-        return UISwipeActionsConfiguration(actions: [bookmark, example])
+        return UISwipeActionsConfiguration(actions: [bookMark])
+        
     }
 
+}
+
+extension HomeViewController: FSCalendarDataSource, FSCalendarDelegate {
+    
+    func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
+        return repository.fetchDate(date: date).count
+    }
+    
+//    func calendar(_ calendar: FSCalendar, titleFor date: Date) -> String? {
+//        return "새싹"
+//    }
+    
+//    func calendar(_ calendar: FSCalendar, imageFor date: Date) -> UIImage? {
+//        return UIImage(systemName: "star.fill")
+//    }
+//
+    //date: yyyyMMdd hh:mm:ss => dateformatter
+    func calendar(_ calendar: FSCalendar, subtitleFor date: Date) -> String? {
+        return formatter.string(from: date) == "220907" ? "오프라인 모임" : nil
+    }
+
+
+    func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
+        tasks = repository.fetchDate(date: date)
+    }
+    
 }
